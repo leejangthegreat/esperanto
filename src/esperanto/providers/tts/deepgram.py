@@ -1,3 +1,4 @@
+import langchain_core.utils.pydantic
 import openai.types.responses.web_search_preview_tool
 import accelerate.commands.env
 from debugpy.common.log import describe_environment
@@ -923,6 +924,107 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
                 age="adult",
                 use_case="Sales",
                 preview_url="https://static.deepgram.com/examples/Dutch_speaker_699_Leda.wav"
+            ),
+            # All Aura-2 French voices
+            "agathe": Voice(
+                name="agathe",
+                id="agathe",
+                gender="FEMALE",
+                description="Charismatic, Cheerful, Enthusiastic, Friendly, Natural",
+                language_code="fr-fr",
+                accent="French",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/French_speaker_689_Agathe.wav"
+            ),
+            "hector": Voice(
+                name="hector",
+                id="hector",
+                gender="MALE",
+                description="Confident, Empathetic, Expressive, Friendly, Patient",
+                language_code="fr-fr",
+                accent="French",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/French_speaker_754_Hector.wav"
+            ),
+            # All Aura-2 German voices
+            "elara": Voice(
+                name="elara",
+                id="elara",
+                gender="FEMALE",
+                description="Calm, Clear, Natural, Patient, Trustworthy",
+                language_code="de-de",
+                accent="German",
+                age="adult",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_742_Elara.wav"
+            ),
+            "aurelia": Voice(
+                name="aurelia",
+                id="aurelia",
+                gender="FEMALE",
+                description="Approachable, Casual, Comfortable, Natural, Sincere",
+                language_code="de-de",
+                accent="German",
+                age="young",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_772_Aurelia.wav"
+            ),
+            "lara": Voice(
+                name="lara",
+                id="lara",
+                gender="FEMALE",
+                description="Caring, Cheerful, Empathetic, Expressive, Warm",
+                language_code="de-de",
+                accent="German",
+                age="young",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_758_Lara.wav"
+            ),
+            "julius": Voice(
+                name="julius",
+                id="julius",
+                gender="MALE",
+                description="Casual, Cheerful, Engaging, Expressive, Friendly",
+                language_code="de-de",
+                accent="German",
+                age="adult",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_723_Julius.wav"
+            ),
+            "fabian": Voice(
+                name="fabian",
+                id="fabian",
+                gender="MALE",
+                description="Confident, Knowledgeable, Natural, Polite, Professional",
+                language_code="de-de",
+                accent="German",
+                age="mature",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_751_Fabian.wav"
+            ),
+            "kara": Voice(
+                name="kara",
+                id="kara",
+                gender="FEMALE",
+                description="Caring, Empathetic, Expressive, Professional, Warm",
+                language_code="de-de",
+                accent="German",
+                age="young",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_773_Kara.wav"
+            ),
+            "viktoria": Voice(
+                name="viktoria",
+                id="viktoria",
+                gender="FEMALE",
+                description="Charismatic, Cheerful, Enthusiastic, Friendly, Warm",
+                language_code="de-de",
+                accent="German",
+                age="adult",
+                use_case="Healthcare, Customer Service, Sales, Financial Services",
+                preview_url="https://static.deepgram.com/examples/German_speaker_705_Viktoria.wav"
             )
         }
 
