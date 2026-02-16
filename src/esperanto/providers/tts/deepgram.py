@@ -1138,6 +1138,62 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
                 age="adult",
                 use_case="Casual Chat, Interview, Narration",
                 preview_url="https://static.deepgram.com/examples/Italian_speaker_718_Demetra.wav"
+            ),
+            # All Aura-2 Japanese voices
+            "uzume": Voice(
+                name="uzume",
+                id="uzume",
+                gender="FEMALE",
+                description="Approachable, Clear, Polite, Professional, Trustworthy",
+                language_code="ja-jp",
+                accent="Japanese",
+                age="adult",
+                use_case="Customer Service, Interview, IVR, Commercial",
+                preview_url="https://static.deepgram.com/examples/Japanese_speaker_679_Uzume"
+            ),
+            "ebisu": Voice(
+                name="ebisu",
+                id="ebisu",
+                gender="MALE",
+                description="Calm, Deep, Natural, Patient, Sincere",
+                language_code="ja-jp",
+                accent="Japanese",
+                age="young",
+                use_case="Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Japanese_speaker_734_Ebisu.wav"
+            ),
+            "fujin": Voice(
+                name="fujin",
+                id="fujin",
+                gender="MALE",
+                description="Calm, Confident, Knowledgeable, Professional, Smooth",
+                language_code="ja-jp",
+                accent="Japanese",
+                age="adult",
+                use_case="Interview, Casual Chat, IVR",
+                preview_url="https://static.deepgram.com/examples/Japanese_speaker_727_Fujin.wav"
+            ),
+            "izanami": Voice(
+                name="izanami",
+                id="izanami",
+                gender="FEMALE",
+                description="Approachable, Clear, Knowledgeable, Polite, Professional",
+                language_code="ja-jp",
+                accent="Japanese",
+                age="adult",
+                use_case="Casual Chat, Customer Service, Interview, IVR",
+                preview_url="https://static.deepgram.com/examples/Japanese_speaker_749_Izanami"
+            ),
+            "ama": Voice(
+                name="ama",
+                id="ama",
+                gender="FEMALE",
+                description="Casual, Comfortable, Confident, Knowledgeable, Natural",
+                language_code="ja-jp",
+                accent="Japanese",
+                age="adult",
+                use_case="Interview, IVR",
+                preview_url="https://static.deepgram.com/examples/Japanese_speaker_693_Ama.wav"
             )
         }
 
