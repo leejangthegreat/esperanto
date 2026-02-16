@@ -1,3 +1,5 @@
+import langchain_core.messages.human
+from huggingface_hub import VideoClassificationInput
 import langchain_core.utils.pydantic
 import openai.types.responses.web_search_preview_tool
 import accelerate.commands.env
@@ -1025,6 +1027,117 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
                 age="adult",
                 use_case="Healthcare, Customer Service, Sales, Financial Services",
                 preview_url="https://static.deepgram.com/examples/German_speaker_705_Viktoria.wav"
+            ),
+            # All Aura-2 Italian voices
+            "melia": Voice(
+                name="melia",
+                id="melia",
+                gender="FEMALE",
+                description="Clear, Comfortable, Engaging, Friendly, Natural",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Casual Chat, Customer Service, Interview",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_771_Melia.wav"
+            ),
+            "elio": Voice(
+                name="elio",
+                id="elio",
+                gender="MALE",
+                description="Breathy, Calm, Professional, Smooth, Trustworthy",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Interview, Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_736_Elio.wav"
+            ),
+            "flavio": Voice(
+                name="flavio",
+                id="flavio",
+                gender="MALE",
+                description="Confident, Deep, Empathetic, Professional, Trustworthy",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Casual Chat, Interview, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_709_Flavio.wav"
+            ),
+            "maia": Voice(
+                name="maia",
+                id="maia",
+                gender="FEMALE",
+                description="Caring, Energetic, Expressive, Professional, Warm",
+                language_code="it-it",
+                accent="Italian",
+                age="young",
+                use_case="Interview, Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_745_Maia.wav"
+            ),
+            "cinzia": Voice(
+                name="cinzia",
+                id="cinzia",
+                gender="FEMALE",
+                description="Approachable, Friendly, Smooth, Trustworthy, Warm",
+                language_code="it-it",
+                accent="Italian",
+                age="mature",
+                use_case="Customer Service, Interview, Narration",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_763_Cinzia.wav"
+            ),
+            "cesare": Voice(
+                name="cesare",
+                id="cesare",
+                gender="MALE",
+                description="Clear, Empathetic, Knowledgeable, Natural, Smooth",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Casual Chat, Customer Service, Interview, IVR",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_770_Cesare.wav"
+            ),
+            "livia": Voice(
+                name="livia",
+                id="livia",
+                gender="FEMALE",
+                description="Approachable, Cheerful, Clear, Engaging, Expressive",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Customer Service, Interview, Audiobook",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_721_Livia.wav"
+            ),
+            "perseo": Voice(
+                name="perseo",
+                id="perseo",
+                gender="MALE",
+                description="Casual, Clear, Natural, Polite, Smooth",
+                language_code="it-it",
+                accent="Italian",
+                age="young",
+                use_case="Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_735_Perseo.wav"
+            ),
+            "dionisio": Voice(
+                name="dionisio",
+                id="dionisio",
+                gender="MALE",
+                description="Confident, Engaging, Friendly, Melodic, Positive",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Interview, Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_767_Dionisio.wav"
+            ),
+            "demetra": Voice(
+                name="demetra",
+                id="demetra",
+                gender="FEMALE",
+                description="Calm, Comfortable, Patient",
+                language_code="it-it",
+                accent="Italian",
+                age="adult",
+                use_case="Casual Chat, Interview, Narration",
+                preview_url="https://static.deepgram.com/examples/Italian_speaker_718_Demetra.wav"
             )
         }
 
