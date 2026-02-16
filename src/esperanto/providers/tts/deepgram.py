@@ -1,3 +1,7 @@
+import accelerate.commands.env
+from debugpy.common.log import describe_environment
+import prompt_toolkit.eventloop
+from debugpy.launcher.debuggee import describe
 from sklearn.ensemble import VotingClassifier
 import langchain_anthropic
 from tornado.test.web_test import DecoratedStreamingRequestFlowControlTest
@@ -180,6 +184,7 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
         """Get available voices."""
         # DeepGram TTS has predefined voices
         voices = {
+            # All Aura-2 English voices
             "amalthea": Voice(
                 name="amalthea",
                 id="amalthea",
@@ -630,6 +635,193 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
                 age="adult",
                 use_case="IVR",
                 preview_url="https://static.deepgram.com/examples/Aura-2-zeus.wav"
+            ),
+            # All Aura-2 Spanish voices
+            "sirio": Voice(
+                name="sirio",
+                id="sirio",
+                gender="MALE",
+                description="Calm, Professional, Comfortable, Empathetic, Baritone",
+                language_code="es-mx",
+                accent="Mexican",
+                age="adult",
+                use_case="Casual Chat, Interview",
+                preview_url="https://static.deepgram.com/examples/Sirio.wav"
+            ),
+            "nestor": Voice(
+                name="nestor",
+                id="nestor",
+                gender="MALE",
+                description="Calm, Professional, Approachable, Clear, Confident",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Casual Chat, Customer Service",
+                preview_url="https://static.deepgram.com/examples/Nestor.wav"
+            ),
+            "carina": Voice(
+                name="carina",
+                id="carina",
+                gender="FEMALE",
+                description="Professional, Raspy, Energetic, Breathy, Confident",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Interview, Customer Service, IVR",
+                preview_url="https://static.deepgram.com/examples/Carina.wav"
+            ),
+            "celeste": Voice(
+                name="celeste",
+                id="celeste",
+                gender="FEMALE",
+                description="Clear, Energetic, Positive, Friendly, Enthusiastic",
+                language_code="es-co",
+                accent="Colombian",
+                age="young",
+                use_case="Casual Chat, Advertising, IVR",
+                preview_url="https://static.deepgram.com/examples/Celeste.wav"
+            ),
+            "alvaro": Voice(
+                name="alvaro",
+                id="alvaro",
+                gender="MALE",
+                description="Calm, Professional, Clear, Knowledgeable, Approachable",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Interview, Customer Service",
+                preview_url="Interview, Customer Service"
+            ),
+            "diana": Voice(
+                name="diana",
+                id="diana",
+                gender="FEMALE",
+                description="Professional, Confident, Expressive, Polite, Knowledgeable",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Storytelling, Advertising",
+                preview_url="https://static.deepgram.com/examples/Diana.wav"
+            ),
+            "aquila": Voice(
+                name="aquila",
+                id="aquila",
+                gender="MALE",
+                description="Expressive, Enthusiastic, Confident, Casual, Comfortable",
+                language_code="es-419",
+                accent="Latin American",
+                age="adult",
+                use_case="Casual Chat, Informative",
+                preview_url="https://static.deepgram.com/examples/Aquila.wav"
+            ),
+            "selena": Voice(
+                name="selena",
+                id="selena",
+                gender="FEMALE",
+                description="Approachable, Casual, Friendly, Calm, Positive",
+                language_code="es-419",
+                accent="Latin American",
+                age="young",
+                use_case="Customer Service, Informative",
+                preview_url="https://static.deepgram.com/examples/Selena.wav"
+            ),
+            "estrella": Voice(
+                name="estrella",
+                id="estrella",
+                gender="FEMALE",
+                description="Approachable, Natural, Calm, Comfortable, Expressive",
+                language_code="es-mx",
+                accent="Mexican",
+                age="mature",
+                use_case="Casual Chat, Interview",
+                preview_url="https://static.deepgram.com/examples/Estrella.wav"
+            ),
+            "javier": Voice(
+                name="javier",
+                id="javier",
+                gender="MALE",
+                description="Approachable, Professional, Friendly, Comfortable, Calm",
+                language_code="es-mx",
+                accent="Mexican",
+                age="adult",
+                use_case="Casual Chat, IVR, Storytelling",
+                preview_url="https://static.deepgram.com/examples/Javier.wav"
+            ),
+            "agustina": Voice(
+                name="agustina",
+                id="agustina",
+                gender="FEMALE",
+                description="Calm, Clear, Expressive, Knowledgeable, Professional",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Interview, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_725_Agustina.wav"
+            ),
+            "antonia": Voice(
+                name="antonia",
+                id="antonia",
+                gender="FEMALE",
+                description="Approachable, Enthusiastic, Friendly, Natural, Professional",
+                language_code="es-ar",
+                accent="Argentine",
+                age="adult",
+                use_case="Customer Service, Interview, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_724_Antonia.wav"
+            ),
+            "gloria": Voice(
+                name="gloria",
+                id="gloria",
+                gender="FEMALE",
+                description="Casual, Clear, Expressive, Natural, Smooth",
+                language_code="es-co",
+                accent="Colombian",
+                age="young",
+                use_case="Customer Service, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_671_Gloria.wav"
+            ),
+            "luciano": Voice(
+                name="luciano",
+                id="luciano",
+                gender="MALE",
+                description="Charismatic, Cheerful, Energetic, Expressive, Friendly",
+                language_code="es-mx",
+                accent="Mexican",
+                age="adult",
+                use_case="Customer Service, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_695_Luciano.wav"
+            ),
+            "olivia": Voice(
+                name="olivia",
+                id="olivia",
+                gender="FEMALE",
+                description="Breathy, Calm, Casual, Expressive, Warm",
+                language_code="es-mx",
+                accent="Mexican",
+                use_case="Customer Service, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_750_Olivia.wav"
+            ),
+            "silvia": Voice(
+                name="silvia",
+                id="silvia",
+                gender="FEMALE",
+                description="Charismatic, Clear, Expressive, Natural, Warm",
+                language_code="es-es",
+                accent="Peninsular",
+                age="adult",
+                use_case="Customer Service, Casual Chat",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_737_Silvia.wav"
+            ),
+            "valerio": Voice(
+                name="valerio",
+                id="valerio",
+                gender="MALE",
+                description="Deep, Knowledgeable, Natural, Polite, Professional",
+                language_code="es-mx",
+                accent="Mexican",
+                age="adult",
+                use_case="Customer Service, Informative",
+                preview_url="https://static.deepgram.com/examples/Spanish_speaker_743_Valerio.wav"
             )
         }
 
