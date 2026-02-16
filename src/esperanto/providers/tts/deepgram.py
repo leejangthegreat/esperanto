@@ -1,3 +1,4 @@
+import openai.types.responses.web_search_preview_tool
 import accelerate.commands.env
 from debugpy.common.log import describe_environment
 import prompt_toolkit.eventloop
@@ -822,6 +823,106 @@ class DeepGramTextToSpeechModel(TextToSpeechModel):
                 age="adult",
                 use_case="Customer Service, Informative",
                 preview_url="https://static.deepgram.com/examples/Spanish_speaker_743_Valerio.wav"
+            ),
+            # All Aura-2 Dutch voices
+            "beatrix": Voice(
+                name="beatrix",
+                id="beatrix",
+                gender="FEMALE",
+                description="Cheerful, Enthusiastic, Friendly, Trustworthy, Warm",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_761_Beatrix.wav"
+            ),
+            "daphne": Voice(
+                name="daphne",
+                id="daphne",
+                gender="FEMALE",
+                description="Calm, Clear, Confident, Professional, Smooth",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Healthcare, Interview, Casual Chat, Audiobook",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_769_Daphne.wav"
+            ),
+            "cornelia": Voice(
+                name="cornelia",
+                id="cornelia",
+                gender="FEMALE",
+                description="Approachable, Friendly, Polite, Positive, Warm",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_686_Cornelia.wav"
+            ),
+            "sander": Voice(
+                name="sander",
+                id="sander",
+                gender="MALE",
+                description="Calm, Clear, Deep, Professional, Smooth",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_706_Sander.wav"
+            ),
+            "hestia": Voice(
+                name="hestia",
+                id="hestia",
+                gender="FEMALE",
+                description="Approachable, Caring, Expressive, Friendly, Knowledgeable",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_779_Hestia.wav"
+            ),
+            "lars": Voice(
+                name="lars",
+                id="lars",
+                gender="MALE",
+                description="Breathy, Casual, Comfortable, Sincere, Trustworthy",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_778_Lars.wav"
+            ),
+            "roman": Voice(
+                name="roman",
+                id="roman",
+                gender="MALE",
+                description="Calm, Casual, Deep, Natural, Patient",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_708_Roman.wav"
+            ),
+            "rhea": Voice(
+                name="rhea",
+                id="rhea",
+                gender="FEMALE",
+                description="Caring, Knowledgeable, Positive, Smooth, Warm",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Customer Service",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_731_Rhea.wav"
+            ),
+            "leda": Voice(
+                name="leda",
+                id="leda",
+                gender="FEMALE",
+                description="Caring, Comfortable, Empathetic, Friendly, Sincere",
+                language_code="nl-nl",
+                accent="Dutch",
+                age="adult",
+                use_case="Sales",
+                preview_url="https://static.deepgram.com/examples/Dutch_speaker_699_Leda.wav"
             )
         }
 
